@@ -1,0 +1,9 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Ask Jon Skeet</os:ShortName>
+<os:Description>Ask Jon Skeet</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sMBg8hIgYV56sAAAI5SURBVCjPbY/tS1NhGMaft52dnb2cdjZzulxTU9D59sFARdHoQwhZfguC/r4igiKkIgIlDC3DyGra3CrnZi9r2jk729l5e+4+TKbN7q/39eP6XRidOY/gE7wBjG0PJhw4wkzTygDQ+LLTUUKYP+CLSCGJMbWm+0UxLPu9HvY+V1er+hkAY0WOIm7Mj48OJrpCbVHLtupV7eNupnio/wcQmEAxH+/vnx5Jne9oj19MYgQEkbnpK3D3fq6wjxAghMgpdxEQ6UsmRSpwANu2Hcc1bQszvHh1VgqGjrWbeXAsC7ulXyXL5QiIZZrAwSWYO0AIuA5vVQrKCnWdRFvsa/Hg5eY7E/PbizdVw3ixsjzY1xMQBdNACCHaBO7M35jqaU/GO2NdcaUtCpTtZjJDfQM+yZuIdxjY82E7/U9DtlCYSkQRd/sv9YqiqOraw6VnihxQIqMUk9/l560bcgf7ciQCLmzvfAZK1t5sgOOmc5l0LlsxjZ/lo0bsREnVVKDSQLxTrVUQRauv1rt7uoeGh8Lhc49XNx4sPWptQIgXy0cMI8s0Q1IwlUpZlv16fb2uVTY/7TRDxxswFTBlihwG7Pqp90/pcGZy4o+uhUMBw3R2splWIJYYuR6P7lWLzOWYsW9fcvl8fmJu0q6b956s5Av5JtDYQBaGZ65diFEm1JAd9PkRptWKvry65jjw9O1W8UfhBMCYLs4tDEdD+e/7t2Zmt/ayKtglXe3u7R27PKaEZcli6WKhZlQbwF8AWQHtOM0lMAAAAABJRU5ErkJggg==</os:Image>
+<SearchForm>https://images.google.com</SearchForm>
+<os:Url type="text/html" method="GET" template="http://askjonskeet.com/search/?q={searchTerms}">
+</os:Url>
+</SearchPlugin>

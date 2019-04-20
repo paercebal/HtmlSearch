@@ -1,0 +1,9 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Pathfinder Wiki Fr (G)</os:ShortName>
+<os:Description>Pathfinder Wiki Fr Search with Google</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16"> data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACNUlEQVQ4y4WTS0hUYRiGn5kO4+WUQ+PkhFCppIEQQUZZUoFQVgSSu0Rolftau6x10tJFSxMkozaam3BhWXIgLxRmeSsvM/Orc2b8z2XOXFrMeHByrHdzfs73vc93Oef3DL96mfWVlGIZBpZpUN+QJFCZRkovs9MlFJNMJFj++Z2pyY8oYmOdMvUIpkxwpjFDoNIHgKpmOHFSR/skXWO56sWQGbaiYWa0z6yGBcqvpQW83kPEt7eICR/37p9zDYGAh9+LMxyv9nP5Wi3fZjeY1RaJrK+yFhFsSQsltilwnCRiY52pyShXW2sIhvwAjI1OU3dapam5hmCoAkXJMvBiBDOZYsd2sJIpvHtnK1cLZ5bSYqh/HG3iBwDBkJ+29qaCHBdw/WYjXd2tSGm7wV3jUP84IqwDcKv9Aurh0v2AsdGv9D0bZmUh4gaNHcs9D/V/cLu8eKVhP2BX0UiukiFtDGnT0dlCW3sT2sQ8y3n4sfyOigL2Vu/obEFKi1N1VQCIPDyaHwdA+dsowvF8J3HK1RK0iXnevdFyS6zyI8I670enDwYY0nKfI281uh62srIQIRiqAKCvd7ggvwjAdjsRYZ3eJ6/5lwp20P3otvudg6EKnj5/4P5UB0nZ3hTENgXbMR1fWe4eyB0LJ50hk82SVTzETbvAZDkpzKRDMp3Gc+NsbVY3bHTTxnJSAAwOPqanZ4C5ubWiVVOpjJuriIRJNC4xk7kXzZfqqa4+yp2759G+LPE//QGzSAxHjU/CewAAAABJRU5ErkJggg==</os:Image>
+<SearchForm>http://www.google.com</SearchForm>
+<os:Url type="text/html" method="GET" template="http://www.google.com/search?q={searchTerms}+site:www.pathfinder-fr.org/Wiki">
+</os:Url>
+</SearchPlugin>

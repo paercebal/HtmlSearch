@@ -1,0 +1,88 @@
+:root
+{
+   --prefix-width : 5%;
+   --image-width : 5%;
+   --suffix-width : 15%;
+   --total-width : 100%;
+   --middle-width : calc(var(--total-width) - var(--prefix-width) - var(--image-width) - var(--suffix-width));
+   
+   --select-button-left : 0;
+   --select-button-width : var(--prefix-width);
+   --select-left : 0;
+   --select-width : calc(var(--total-width) - var(--suffix-width));
+   --icon-left : var(--prefix-width);
+   --icon-width : var(--image-width);
+   --input-left : calc(var(--prefix-width) + var(--image-width));
+   --input-width : var(--middle-width);
+   --search-left : calc(var(--total-width) - var(--suffix-width));
+   --search-width : var(--suffix-width);
+}
+
+html, input, select, option, button
+{
+   font-size : 20pt;
+}
+
+div.cssSearchBox
+{
+   height : 1.5em;
+}
+
+div.cssIcon
+{
+   position : absolute;
+   width : var(--icon-width);
+   left : var(--icon-left);
+   height : 1.5em;
+   z-index : 1;
+   padding : 0.25em;
+}
+
+div.cssIcon img
+{
+   width : 1em;
+   height : 1em;
+}
+
+select.cssWhere
+{
+   position : absolute;
+   width : var(--select-width);
+   direction: rtl;
+   z-index : 2;
+   height : 1.4em;
+   padding : 0 1em;
+   background: rgba(255, 255, 255, 0);
+}
+
+select.cssWhere option
+{
+   direction: ltr;
+}
+
+
+input.cssWhat
+{
+   position : absolute;
+   width : var(--input-width);
+   left : var(--input-left);
+   background: rgba(255, 255, 255, 0.75);
+   z-index : 3;
+   height : 1.4em;
+}
+
+input.cssWhat:focus
+{
+   background: rgba(255, 255, 0, 0.75);
+}
+
+button.cssSearch
+{
+   position : absolute;
+   width : var(--search-width);
+   left : var(--search-left);
+   z-index : 4;
+   height : 1.4em;
+   margin : 0;
+   border : 0;
+}

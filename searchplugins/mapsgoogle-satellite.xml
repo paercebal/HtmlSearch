@@ -1,0 +1,12 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Google Maps - Satellite</os:ShortName>
+<os:Description>Maps.Google.com Search</os:Description>
+<os:InputEncoding>utf-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJySURBVHjaYvz//z8DOvj354/QvfmL3wIBA4cwP4OOjo45s6XlKQYsACCAGNENuH/tSs7U7s5y3vvPZURFRRlefH7PwMTE9FbEy26+p6dnn7Ky/nNk9QABxILMeXzzRurNletibDn4ZWzcdBl+/PjB8J+Hg+Hs2bPCD09fLrnz6RencDR3kYC8yi+YHoAAYoIxfn75ordizpycX69fmxsaGjK8efOGYceOHQwgb+jp6THIy8sz7NmzJ3vz5s3VyJYCBBDcgFc3b7q/v3pNz1FegeHfnbsMi/q7GfadPs4wuauLgePNCwYnBUUG4Y+fGF5evebE8OoZG0wfQADBvSAgJnYP6FcGUJjw8PAwSAgJMrC+e88griDDICEhwfD2508GVlZWBl4+vlfAQPkL0wcQQHADOEVFz/MqK944dO2ihpWVFUNMdgbY+SJy0gzfWJkYNh0/yPCO+S+DupbGQQYRCbgBAAEE9wILB8e9wNi4hR9//Hh15swZBkZGRgZxcXGG379/Mzx+/Jjh9evXoOg8Z2FhsQI5DAACCOxkZPzu4YOwfE/3z1tT0/6/mDHz//WJ/f9T5WX/T2upWvjtyS1OdPUAAcSEnjAE5eRXRWdmLQHZ+v79e4ajR48yqKio/DIzM1vNKa36HV09QAAxYUtdei6ufe+FJJ/f+PaP4fCjlwyaHv7dxq7+W7CpBQggrAawc3LeNra1PnPlyhUGQUHBt9bW1ksZcACAAMIIAxh+/+qti4mC9v/a4upVuNSAMEAAMeEymIuH6+HNBzcZZGVlrzDgAQABhNMANk6O29rWNgwSBpo78BkAEECM2LIzKQAgwADHuhoKS09kJAAAAABJRU5ErkJggg==</os:Image>
+<UpdateInterval>7</UpdateInterval>
+<UpdateUrl>http://mycroft.mozdev.org/update.php/id2/MapsGoogleSat.src</UpdateUrl>
+<IconUpdateUrl>http://mycroft.mozdev.org/update.php/id2/MapsGoogleSat.png</IconUpdateUrl>
+<SearchForm>http://maps.google.com/maps</SearchForm>
+<os:Url type="text/html" method="GET" template="http://maps.google.com/maps?q={searchTerms}&amp;t=k&amp;hl=en">
+</os:Url>
+</SearchPlugin>

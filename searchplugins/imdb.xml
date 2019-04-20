@@ -1,0 +1,9 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>IMDb</os:ShortName>
+<os:Description>IMDb Movie Search</os:Description>
+<os:InputEncoding>iso-8859-1</os:InputEncoding>
+<os:Image width="16" height="16">data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAAGa2tLEAAAAK3RFWHRDcmVhdGlvbiBUaW1lAFR1ZSA4IEp1biAyMDA0IDE3OjAyOjIzIC0wODAwbv+wuAAAAAd0SU1FB9QGCQADOcMblXgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAEZ0FNQQAAsY8L/GEFAAAAD1BMVEX///8AAAD/zmP/zgD//wBSW1EvAAAAAXRSTlMAQObYZgAAAFtJREFUeNpdjMENwkAMBCdSCsC+CpjQQHwNIJH+a8LcB8G8VtrdAe5A8Jps0YlZhMSN/bqenBGDPJQvq1AfmCblSKbzbEHfftld9D4zw+EKH9pQ7bXYPCz9vzZvfjQK0ZG9mJkAAAAASUVORK5CYII=</os:Image>
+<SearchForm>http://www.imdb.com/</SearchForm>
+<os:Url type="text/html" method="GET" template="http://akas.imdb.com/find?q={searchTerms}&amp;sourceid=mozilla-search">
+</os:Url>
+</SearchPlugin>

@@ -1,0 +1,9 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>FanFiction (G)</os:ShortName>
+<os:Description>FanFiction Search with Google</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACBSURBVDhPYzQ2nvmfgQLARIFesFZGmAtOnk7DMMvcdBZYDJ8cC7IumAZ0k9DFkQ1EMQDdJnwugFlCXRfg8i8+b6K4AKYQV1hgC0ysBmBTiCu6KXYBzoSE7Ap8LsKbEonxCl4DQIFJyBCCeQFXjMACFcMAmAZkjdjEYAbAMxO5uRIApJAyMkInFCsAAAAASUVORK5CYII=</os:Image>
+<SearchForm>http://www.google.com</SearchForm>
+<os:Url type="text/html" method="GET" template="http://www.google.com/search?q={searchTerms}+site:fanfiction.net">
+</os:Url>
+</SearchPlugin>
