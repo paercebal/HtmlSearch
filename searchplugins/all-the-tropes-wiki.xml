@@ -1,0 +1,9 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>All The Tropes Wiki (G)</os:ShortName>
+<os:Description>All The Tropes Wiki Search with Google</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAC8ElEQVQozzWLX0gTcQDHf7+7393ttttym8622phrW6mZOKmhVERI6XNQVG+9FlFE9IeegiCIMrA3iZIeQqieQjKQ/ml/sJx/h9N0ds7pbjVvt922u93drwfr+/b5fPhCjHGloghZwUKjYqlktm7bFNLBPXvlUiXx/T1EFKC4Ole9KIqanAWECRmGMT02hJPDO1u71vhVxt1WmR0M7e4rFgv5sV5akzaoEAz4Z+KLzfqXTG03qqqKOtlvZ9RfSS8mzZWKDEki9yfj3r4jfeSqsTKyu8azOf3K0Lgqa5dQLZHeWCdYW87RqRYzWklIJacxqE58eAkAoBmWsLoNbifReJL1thmOsKJjZOU43t/D1rilTNJmpqINbVIuTQg/RVklKYqsDSFuO2toIW87ygc67AHkcDhlcRXlvlZJr1lZ+KnTtvIcQTsSQ7cUwl7ICwyJnU4XhmqWnwqHuwgACN/eLh2Zgw1+WuGV9KhqCUSOX9Tl1RQ/Qyu8osqZlW8VxmNFovibRwACiuUgw5RJm6SZcV2ElsZjb/gqZfEFg4Sr0w9TydnhZGLMR5HgTxwahpGTpPnFxGZRzwjrkeY9FotFzqcadrVnhRWzxbm4nJyY+h49cBDBYmO4DWqaNvw10T80W6iStIlCuHL6cPjEkX00RcSTwt3nY/NCub6uplqWW9zWy6c64EScvzPw6drZzia/U6nqEwuZJyNzB5s9+8Oe6wOjNGeJBuzRYJ3Txs6lcvGldXjl/usz3S2RJh/4v02xcOHRG0kFKiRPRX1nj7YwJmYrvXgXI1IbYqTJu8UYYwAAZ2ZMNC0ZqKfZda4nwpgYjPFWavW7iJDPOfpjaesAIcznizcfv5/PqlZcXskWAPznIYQAgGUhTz7tf3jpwbCuaVhXR8aX7r2MxVJFDwf6zh+bTKy9Hl8O1XOObRwARizBD7ydgbphTC+s3X72eb2AESINrHWEbDdOH3LWWMVCqXfw88eFLMcigoQsBDdORv8C4R1t0AZrBfcAAAAASUVORK5CYII=</os:Image>
+<SearchForm>http://www.google.com</SearchForm>
+<os:Url type="text/html" method="GET" template="http://www.google.com/search?q={searchTerms}+site:allthetropes.orain.org/wiki/">
+</os:Url>
+</SearchPlugin>

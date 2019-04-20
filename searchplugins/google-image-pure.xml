@@ -1,0 +1,9 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Google Image Pure</os:ShortName>
+<os:Description>Pure Search with Google Image</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAxBJREFUOMsFwUtoXFUYwPH/d869k8lkmuckTmhroxNpELLowypBGrDaFnyiElyoLQgquNJtt1HcCIILpb5wE0UEFbswSCFQ26jV2miMiSlY0jxqrOlMOq8795zz+ftxZuYiqVP9eXlFh05MafTIJ/rGF3Pq1WlSuannxsf0D0FbxqgH9RitC7oFembmIuJSVRPBk5PTfDUvmHwfeS1zafIQpWKOxsISlfvuYaBaR8SieBKgrhFV4zA2Au8c8/8EyHcRrGW7EfPpj1cBS3bkbpKx+3EIwXgcQkstKg4NYDRAJBG3dWcxrYAhwYhl/m8H4hALfkeOFIsNEKnBiqelkBpLJCYAcGy0wPk/N4jaegghwZiIgMUksLmwyNqg4eaOHuIWDJSr9G+npOqJrqyUKd3ey4vHh5k6d43F6xU62wMnx3chCKenP2DyWJNrd+3DSgbvA+31lH1XGjxxYQXZ+/zH+vrJe3lqfIRyLeXrX9YYK3VR2t3Dm9Pvc+qnd7DFLgiKDx4wSCqoiZGqRfonPtM0qbJ/KMcDB4qcevYwiDKzfIkjH04QhgcgGBCQVgyApg5xMTjB9NoW+UyWC8tN3pr6i6ubNVQtd/buZLi0H5ImJhiMj1AcEhQhRgA1LUxavsGu9oTHDhZ47vgI5W2PCuzuG+T8M6c5WjiM1qsEFVBLEFAgKJDGyNR3l/WhA6P09RhcZYGt/5apb68zOPw02Xw/qXc8/vlrfLtxFs10greYNBC8BQ+iXrV6Y47l2Zfp4TeiuI4mhmo6ws4jX9LZW2Jxc5VDH53gVq6FdRb1QnACDkwSaiydfYk7oh/Y09+k2Jmj0N1GQRbY/P5VFMPewh6KHQOQpHhRgofYxYiDqFXZJO9Wycbd3Ko6xFmCh1x7L765hqQ1GqaDZrUGEmNchiApXj0aFNPePURb/4PUthzazKE+QyR5fMPSNvgomsnzza/TrFc2EG8QH6BhCK0AIYPMXl7i4HCflufeJqr8jknrhDhLW/EodvQFFtev8/C7r7Bq/sWYDgIC6kBjZifek/8BR4yCqAurT/UAAAAASUVORK5CYII=</os:Image>
+<SearchForm>http://images.google.com</SearchForm>
+<os:Url type="text/html" method="GET" template="https://encrypted.google.com/search?tbm=isch&amp;safe=off&amp;q={searchTerms}">
+</os:Url>
+</SearchPlugin>

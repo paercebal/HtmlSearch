@@ -1,0 +1,9 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Mozilla Search (G)</os:ShortName>
+<os:Description>Search in Mozilla with Google.com</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAWBJREFUOMutkiFuIzEUhr9uDU1KcgCTPcC7QEBIpKXmQXOCSqZZ4jtMUUDZXsIHmKWRSkoHVVFYVCn6C8aTTtI2XbCPeOzx+/73/zPwvyvnrBCCDGRmyjmrlKJvG/f7vcxMBupAbV0bGGDwNWizeZRzTk1tbEBrkGxYG1AIQd77zwHOuRNAVbmzAbYGdZhijAohqAV9aM45yzmntgLEu/II0gTeTO1Ikvd+8G7DpWnDCBszGc/aaus0waX6FGAg771ijOeTmOn2eDyuV6sV290OAAPugR6YV5s98PL6ym675Tkl/hwO0Pf0fT9kUEqR9/6k3E0mmZ6NuaSUhKGmaYQkOefkvf/gvQPNZjMZKMaolJJaTGZos3nU2Vcopcgu/HfVf0rp+z8xpSS7TN5q0lfqx/iwXC7BjIe6/wU8/AUzuyrsnHMALBaLG4Cfpej3fMj/yXvs7o7xzmd1c+3lv9QbMEoTy5KtAccAAAAASUVORK5CYII=</os:Image>
+<SearchForm>http://www.google.com</SearchForm>
+<os:Url type="text/html" method="GET" template="http://www.google.com/search?q={searchTerms}+site:mozilla.org">
+</os:Url>
+</SearchPlugin>

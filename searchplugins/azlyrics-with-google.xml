@@ -1,0 +1,9 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>A-Z Lyrics (G)</os:ShortName>
+<os:Description>A-Z Lyrics Search with Google</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/x-icon;base64,AAABAAEAEBAAAAAAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAQAMAAAAAAAAAAAAAAAAAAAAAAAC2JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU7Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4+2JU62JU7Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4+2JU62JU7Zc4/23+X23+XZc4/23+X23+XZc4/23+X////////////////23+XZc4+2JU62JU7Zc4/////////Zc4/////////Zc4/susj////////////////////Zc4+2JU62JU7Zc4/////////Zc4/////////Zc4/Zc4/////////Zc4/Zc4/Zc4/Zc4+2JU62JU7Zc4/////////susj////////Zc4/Zc4/23+X////susjZc4/Zc4/Zc4+2JU62JU7Zc4/////////////////////Zc4/Zc4/susj////23+XZc4/Zc4/Zc4+2JU62JU7Zc4/////////Zc4/////////Zc4/Zc4/Zc4/////////Zc4/Zc4/Zc4+2JU62JU7Zc4/////////Zc4/////////Zc4/Zc4/Zc4/susj////susjZc4/Zc4+2JU62JU7Zc4/////////Zc4/////////Zc4/Zc4/Zc4/susj////////Zc4/Zc4+2JU62JU7Zc4/23+X////////////////Zc4/////////////////////susjZc4+2JU62JU7Zc4/Zc4/23+X////////23+XZc4/23+X////////////////23+XZc4+2JU62JU7Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4+2JU62JU7Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4/Zc4+2JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU62JU4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</os:Image>
+<SearchForm>http://www.google.com</SearchForm>
+<os:Url type="text/html" method="GET" template="http://www.google.com/search?q={searchTerms}+site:azlyrics.com">
+</os:Url>
+</SearchPlugin>
