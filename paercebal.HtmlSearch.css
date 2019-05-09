@@ -6,12 +6,10 @@
    --total-width : 100%;
    --middle-width : calc(var(--total-width) - var(--prefix-width) - var(--image-width) - var(--suffix-width));
    
-   --select-button-left : 0;
-   --select-button-width : var(--prefix-width);
-   --select-left : 0;
-   --select-width : calc(var(--total-width) - var(--suffix-width));
-   --icon-left : var(--prefix-width);
+   --icon-left : 0;
    --icon-width : var(--image-width);
+   --select-left : var(--image-width);
+   --select-width : calc(var(--total-width) - var(--suffix-width) - var(--image-width));
    --input-left : calc(var(--prefix-width) + var(--image-width));
    --input-width : var(--middle-width);
    --search-left : calc(var(--total-width) - var(--suffix-width));
@@ -20,7 +18,7 @@
 
 html, input, select, option, button
 {
-   font-size : 20pt;
+   font-size : 18pt;
 }
 
 div.cssSearchBox
@@ -48,11 +46,17 @@ select.cssWhere
 {
    position : absolute;
    width : var(--select-width);
+   left : var(--select-left);
    direction: rtl;
    z-index : 2;
    height : 1.4em;
    padding : 0 1em;
    background: rgba(255, 255, 255, 0);
+}
+
+select.cssWhere:focus
+{
+   background: rgba(255, 255, 0, 1);
 }
 
 select.cssWhere option
