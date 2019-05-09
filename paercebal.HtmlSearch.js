@@ -104,6 +104,7 @@ paercebal.HtmlSearch.generateOneSearchLine = function(parent, list, orderedList,
       select.setAttribute("rbr_index", index);
       select.setAttribute("id", "ID_where_" + index);
       select.setAttribute("class", "cssWhere");
+      select.setAttribute("tabindex", "0");
       select.onchange = paercebal.HtmlSearch.onWhereChange;
       div.appendChild(select);
 
@@ -139,6 +140,7 @@ paercebal.HtmlSearch.generateOneSearchLine = function(parent, list, orderedList,
       input.setAttribute("class", "cssWhat");
       input.setAttribute("type", "text");
       input.setAttribute("value", "");
+      input.setAttribute("tabindex", "0");
       input.onkeyup = paercebal.HtmlSearch.onEnterDoSearch;
       div.appendChild(input);
    }
@@ -150,6 +152,7 @@ paercebal.HtmlSearch.generateOneSearchLine = function(parent, list, orderedList,
       button.setAttribute("class", "cssSearch");
       button.setAttribute("type", "button");
       button.textContent = "Search";
+      button.setAttribute("tabindex", "-1");
       button.onclick = paercebal.HtmlSearch.onSearchClick;
       div.appendChild(button);
    }
