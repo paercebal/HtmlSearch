@@ -58,9 +58,12 @@ paercebal.HtmlSearch.onWhereChange = function(event)
    var source = event.target || event.srcElement;
    
    var index = source.getAttribute("rbr_index");
-   var img_src = source.options.item(source.selectedIndex).getAttribute("rbr_img_src");
+   var selectItem = source.options.item(source.selectedIndex);
+   var img_src = selectItem.getAttribute("rbr_img_src");
+   var button_text = selectItem.getAttribute("rbr_button_text");
    
    paercebal.HtmlSearch.widget("ID_img_" + index).setAttribute("src", img_src);
+   paercebal.HtmlSearch.widget("ID_search_" + index).textContent = button_text;
    paercebal.HtmlSearch.widget("ID_what_" + index).focus();
 }
 
@@ -98,6 +101,7 @@ paercebal.HtmlSearch.generateOneSearchLine = function(parent, list, orderedList,
    parent.appendChild(div);
    
    let imgData = "";
+   let buttonText = "";
    
    {
       let select = document.createElement("select");
@@ -115,6 +119,7 @@ paercebal.HtmlSearch.generateOneSearchLine = function(parent, list, orderedList,
          option.setAttribute("value", item.url);
          option.textContent = item.name;
          option.setAttribute("rbr_img_src", item.image);
+         option.setAttribute("rbr_button_text", item.button);
 
          //paercebal.HtmlSearch.doDebug("[" + item.id + "] != [" + orderedList + "]");
 
@@ -123,10 +128,12 @@ paercebal.HtmlSearch.generateOneSearchLine = function(parent, list, orderedList,
             //paercebal.HtmlSearch.doDebug("selected");
             option.setAttribute("selected", "selected");
             imgData = item.image;
+            buttonText = item.button;
          }
          else if((i == 0) && (imgData.length == 0))
          {
             imgData = item.image;
+            buttonText = item.button;
          }
          
          select.appendChild(option);
@@ -151,7 +158,7 @@ paercebal.HtmlSearch.generateOneSearchLine = function(parent, list, orderedList,
       button.setAttribute("id", "ID_search_" + index);
       button.setAttribute("class", "cssSearch");
       button.setAttribute("type", "button");
-      button.textContent = "Search";
+      button.textContent = buttonText;
       button.setAttribute("tabindex", "-1");
       button.onclick = paercebal.HtmlSearch.onSearchClick;
       div.appendChild(button);
@@ -202,13 +209,24 @@ paercebal.HtmlSearch.orderedItem = function(id)
    paercebal.HtmlSearch.g_orderedlist.push(id);
 }
 
-paercebal.HtmlSearch.item = function(id, name, url, description, image)
+paercebal.HtmlSearch.itemGeneric = function(id, name, url, description, button, image)
 {
    var o = {};
    o.id = id;
    o.name = name;
    o.url = url;
    o.description = description;
+   o.button = button;
    o.image = image;
    paercebal.HtmlSearch.g_list.push(o);
+}
+
+paercebal.HtmlSearch.item = function(id, name, url, description, image)
+{
+   return paercebal.HtmlSearch.itemGeneric(id, name, url, description, "Search", image);
+}
+
+paercebal.HtmlSearch.itemTranslate = function(id, name, url, description, image)
+{
+   return paercebal.HtmlSearch.itemGeneric(id, name, url, description, "Translate", image);
 }
