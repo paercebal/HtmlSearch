@@ -230,3 +230,9 @@ paercebal.HtmlSearch.itemTranslate = function(id, name, url, description, image)
 {
    return paercebal.HtmlSearch.itemGeneric(id, name, url, description, "Translate", image);
 }
+
+paercebal.HtmlSearch.itemSynonyms = function(id, name, url, description, image)
+{
+   return paercebal.HtmlSearch.itemGeneric(id, name, url, description, "Synonyms", image);
+}
+
