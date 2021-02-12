@@ -18,7 +18,17 @@
 
 html, input, select, option, button
 {
-   font-size : 14pt;
+   font-size : 15pt;
+}
+
+div.cssDisplayBlock
+{
+   display : box;
+}
+
+div.cssDisplayNone
+{
+   display : none;
 }
 
 div.cssSearchBox
