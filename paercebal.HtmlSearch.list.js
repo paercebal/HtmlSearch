@@ -1,5 +1,5 @@
 // Add the count of visible comboboxes
-paercebal.HtmlSearch.count(28);
+paercebal.HtmlSearch.count(31);
 
 // Add below, in order, the item identifiers you want to appear by default
 paercebal.HtmlSearch.orderedItem("google-pure.xml");
