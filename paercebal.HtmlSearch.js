@@ -102,7 +102,7 @@ paercebal.HtmlSearch.doSearch = function(master_id, index)
    }
 }
 
-paercebal.HtmlSearch.generateOneSearchLine = function(parent, master_id, list, orderedList, index)
+paercebal.HtmlSearch.generateOneSearchLine = function(parent, master_id, searchBoxesData, index)
 {
    let div = document.createElement("div");
    div.setAttribute("class", "cssSearchBox");
@@ -121,18 +121,18 @@ paercebal.HtmlSearch.generateOneSearchLine = function(parent, master_id, list, o
       select.onchange = paercebal.HtmlSearch.onWhereChange;
       div.appendChild(select);
 
-      for(let i = 0, iMax = list.length; i < iMax; ++i)
+      for(let i = 0, iMax = searchBoxesData.full_list.list.length; i < iMax; ++i)
       {
-         let item = list[i];
+         let item = searchBoxesData.full_list.list[i];
          let option = document.createElement("option");
          option.setAttribute("value", item.url);
          option.textContent = item.name;
          option.setAttribute("rbr_img_src", item.image);
          option.setAttribute("rbr_button_text", item.button);
 
-         //paercebal.HtmlSearch.doDebug("[" + item.id + "] != [" + orderedList + "]");
+         //paercebal.HtmlSearch.doDebug("[" + item.id + "] != [" + searchBoxesData.orderedList + "]");
 
-         if((orderedList.length > index) && (item.id == orderedList[index]))
+         if((searchBoxesData.orderedList.length > index) && (item.id == searchBoxesData.orderedList[index]))
          {
             //paercebal.HtmlSearch.doDebug("selected");
             option.setAttribute("selected", "selected");
@@ -193,36 +193,15 @@ paercebal.HtmlSearch.generateOneSearchLine = function(parent, master_id, list, o
    }
 }
 
-paercebal.HtmlSearch.prioritizeList = function(list)
+
+
+
+paercebal.HtmlSearch.SearchBoxesFullList = function()
 {
+   this.list = [];
 }
 
-paercebal.HtmlSearch.generateSearchBoxes = function(div_id, count, list, orderedList)
-{
-   let parent = paercebal.HtmlSearch.widget(div_id);
-   let i, iMax;
-   
-   for(i = 0, iMax = count; i < iMax; ++i)
-   {
-      paercebal.HtmlSearch.generateOneSearchLine(parent, div_id, list, orderedList, i);
-   }
-}
-
-paercebal.HtmlSearch.g_count = 10;
-paercebal.HtmlSearch.g_list = [];
-paercebal.HtmlSearch.g_orderedlist = [];
-
-paercebal.HtmlSearch.count = function(c)
-{
-   paercebal.HtmlSearch.g_count = c;
-}
-
-paercebal.HtmlSearch.orderedItem = function(id)
-{
-   paercebal.HtmlSearch.g_orderedlist.push(id);
-}
-
-paercebal.HtmlSearch.itemGeneric = function(id, name, url, description, button, image)
+paercebal.HtmlSearch.SearchBoxesFullList.prototype.itemGeneric = function(id, name, url, description, button, image)
 {
    var o = {};
    o.id = id;
@@ -231,21 +210,70 @@ paercebal.HtmlSearch.itemGeneric = function(id, name, url, description, button, 
    o.description = description;
    o.button = button;
    o.image = image;
-   paercebal.HtmlSearch.g_list.push(o);
+   this.list.push(o);
 }
 
-paercebal.HtmlSearch.item = function(id, name, url, description, image)
+paercebal.HtmlSearch.SearchBoxesFullList.prototype.item = function(id, name, url, description, image)
 {
-   return paercebal.HtmlSearch.itemGeneric(id, name, url, description, "Search", image);
+   return this.itemGeneric(id, name, url, description, "Search", image);
 }
 
-paercebal.HtmlSearch.itemTranslate = function(id, name, url, description, image)
+paercebal.HtmlSearch.SearchBoxesFullList.prototype.itemTranslate = function(id, name, url, description, image)
 {
-   return paercebal.HtmlSearch.itemGeneric(id, name, url, description, "Translate", image);
+   return this.itemGeneric(id, name, url, description, "Translate", image);
 }
 
-paercebal.HtmlSearch.itemSynonyms = function(id, name, url, description, image)
+paercebal.HtmlSearch.SearchBoxesFullList.prototype.itemSynonyms = function(id, name, url, description, image)
 {
-   return paercebal.HtmlSearch.itemGeneric(id, name, url, description, "Synonyms", image);
+   return this.itemGeneric(id, name, url, description, "Synonyms", image);
+}
+
+
+
+
+paercebal.HtmlSearch.SearchBoxesData = function(full_list)
+{
+   this.count = 10;
+   this.full_list = full_list;
+   this.orderedList = [];
+}
+
+paercebal.HtmlSearch.SearchBoxesData.prototype.setCount = function(c)
+{
+   this.count = c;
+}
+
+paercebal.HtmlSearch.SearchBoxesData.prototype.getCalculatedCount = function(c)
+{
+   return (this.count < this.orderedList.length) ? this.count : this.orderedList.length;
+}
+
+paercebal.HtmlSearch.SearchBoxesData.prototype.orderedItem = function(id)
+{
+   this.orderedList.push(id);
+}
+
+
+paercebal.HtmlSearch.changeDisplay = function(box)
+{
+   paercebal.HtmlSearch.widget(box).setAttribute("class", "cssDisplayBox");
+   
+   for(let i = 1, iMax = arguments.length; i < iMax; ++i)
+   {
+      paercebal.HtmlSearch.widget(arguments[i]).setAttribute("class", "cssDisplayNone");
+   }
+}
+
+
+
+paercebal.HtmlSearch.generateSearchBoxes = function(div_id, searchBoxesData)
+{
+   let parent = paercebal.HtmlSearch.widget(div_id);
+   let i, iMax;
+   
+   for(i = 0, iMax = searchBoxesData.getCalculatedCount(); i < iMax; ++i)
+   {
+      paercebal.HtmlSearch.generateOneSearchLine(parent, div_id, searchBoxesData, i);
+   }
 }
 

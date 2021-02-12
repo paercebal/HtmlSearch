@@ -7,15 +7,33 @@
 <script src="paercebal.HtmlSearch.js"></script>
 <script src="paercebal.HtmlSearch.list.js"></script>
 </head>
-<body onload="paercebal.HtmlSearch.generateSearchBoxes('ID_searchTableGeneric', paercebal.HtmlSearch.g_count, paercebal.HtmlSearch.g_list, paercebal.HtmlSearch.g_orderedlist);">
+<body onload="onLoad();">
+
+<script>
+function onLoad()
+{
+   paercebal.HtmlSearch.generateSearchBoxes('ID_searchTableGeneric', paercebal.HtmlSearch.g_genericSearchBoxesData);
+   paercebal.HtmlSearch.generateSearchBoxes('ID_searchTableRpg', paercebal.HtmlSearch.g_rpgSearchBoxesData);
+   paercebal.HtmlSearch.generateSearchBoxes('ID_searchTableDev', paercebal.HtmlSearch.g_devSearchBoxesData);
+}
+</script>
 
 <div id="ID_searchTableGeneric">
 </div>
 
-<div id="ID_searchTableRpg">
+<hr />
+
+<div style="text-align : center">
+<button type="button" style="width : 46%" onclick="paercebal.HtmlSearch.changeDisplay('ID_searchTableRpg', 'ID_searchTableDev');">RPG</button>
+<button type="button" style="width : 46%" onclick="paercebal.HtmlSearch.changeDisplay('ID_searchTableDev', 'ID_searchTableRpg');">DEV</button>
 </div>
 
-<div id="ID_searchTableDev">
+<hr />
+
+<div id="ID_searchTableRpg" class="cssDisplayBlock">
+</div>
+
+<div id="ID_searchTableDev" class="cssDisplayNone">
 </div>
 
 <!--
