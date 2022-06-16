@@ -32,13 +32,18 @@ paercebal.HtmlSearch.retrieveSelectedWhere = function(master_id, index)
    return "";
 }
 
-paercebal.HtmlSearch.retrieveWhat = function(master_id, index)
+paercebal.HtmlSearch.retrieveWhat = function(master_id, index, p_encoded)
 {
    let what = paercebal.HtmlSearch.widget(paercebal.HtmlSearch.generateWidgetFullId(master_id, "what", index)).value.trim();
    
    if(what.length > 0)
    {
-      return encodeURIComponent(what);
+      if(p_encoded)
+      {
+         return encodeURIComponent(what);
+      }
+      
+      return what;
    }
    
    return "";
@@ -47,11 +52,13 @@ paercebal.HtmlSearch.retrieveWhat = function(master_id, index)
 paercebal.HtmlSearch.calculateUrlRequest = function(master_id, index)
 {
    let where = paercebal.HtmlSearch.retrieveSelectedWhere(master_id, index);
-   let what = paercebal.HtmlSearch.retrieveWhat(master_id, index);
+   let what = paercebal.HtmlSearch.retrieveWhat(master_id, index, true);
+   let whatNotEncoded = paercebal.HtmlSearch.retrieveWhat(master_id, index, false);
    
    if((where.length > 0) && (what.length > 0))
    {
       let url = where.replace("{searchTerms}", what);
+      url = url.replace("{searchTermsNotEncoded}", whatNotEncoded);
       return url
    }
    
