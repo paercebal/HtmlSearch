@@ -103,6 +103,8 @@ paercebal.HtmlSearch.doSearch = function(master_id, index)
 {
    let url = paercebal.HtmlSearch.calculateUrlRequest(master_id, index);
    
+   //alert("[" + url + "]");
+   
    if(url.length > 0)
    {
       window.open(url, "");
