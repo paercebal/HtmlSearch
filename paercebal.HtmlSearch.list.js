@@ -47,16 +47,16 @@ paercebal.HtmlSearch.g_genericSearchBoxesData.orderedItem("netflix-OR-amazon-pri
 paercebal.HtmlSearch.g_rpgSearchBoxesData = new paercebal.HtmlSearch.SearchBoxesData(paercebal.HtmlSearch.g_searchBoxesFullList);
 
 // Add the count of visible comboboxes
-paercebal.HtmlSearch.g_rpgSearchBoxesData.setCount(16);
+paercebal.HtmlSearch.g_rpgSearchBoxesData.setCount(15);
 
 // Add below, in order, the item identifiers you want to appear by default
 paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("dragonlance-nexus-wiki-search-with-google.xml");
-paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("d&d5-srd-en.xml");
+//paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("d&d5-srd-en.xml");
+paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("5e-srd.xml");
 paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("d&d-beyond.xml");
 paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("d&d-wikidot.xml");
 //paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("5e-drs-fr.xml");
 paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("5e-drs-fr_and_r-n-p.xml");
-paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("5e-srd.xml");
 paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("d&d5-aidedd.xml");
 paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("mass-effect-wiki-en.xml");
 paercebal.HtmlSearch.g_rpgSearchBoxesData.orderedItem("pathfinder-wiki-fr.xml");
